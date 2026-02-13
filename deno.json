@@ -1,0 +1,18 @@
+{
+  "unstable": ["kv"],
+  "tasks": {
+    "start": "deno run --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-import --unstable-kv main.ts",
+    "dev": "deno run --watch --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-import --unstable-kv main.ts",
+    "compile": "deno compile --allow-net --allow-read --allow-write --allow-env --allow-ffi --allow-import --unstable-kv --include=assets --output=magi main.ts",
+    "gen:profile": "deno run --allow-read --allow-write --allow-env --allow-ffi --allow-import scripts/gen_profile.ts"
+  },
+  "imports": {
+    "grammy": "https://deno.land/x/grammy@v1.31.2/mod.ts",
+    "grammy/types": "https://deno.land/x/grammy@v1.31.2/types.ts",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+    "canvas": "https://deno.land/x/canvas@v1.4.2/mod.ts"
+  },
+  "compilerOptions": {
+    "strict": true
+  }
+}
