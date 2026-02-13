@@ -1,0 +1,8 @@
+.env
+.env.example
+.git
+.gitignore
+.claude/
+README.md
+LICENSE
+docs/
